@@ -38,7 +38,7 @@ jobs:
           run_install: true
 
       - name: Build site
-        run: yarn build
+        run: yarn build:pages
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
@@ -47,4 +47,3 @@ jobs:
           build_dir: ./dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE: '/viteky/'
