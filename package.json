@@ -12,7 +12,7 @@
     "jest:watchAll": "jest --watchAll",
     "test:coverage": "pnpm build && jest --coverage",
     "windicss:analysis": "windicss-analysis",
-    "lint": "pnpm lint:eslint && lint:style-fix",
+    "lint": "pnpm lint:prettier --write && pnpm lint:eslint --fix && pnpm lint:style-check",
     "lint:style-check": "stylelint .",
     "lint:style-fix": "stylelint . --fix",
     "lint:check": "pnpm lint:prettier && pnpm lint:eslint",
