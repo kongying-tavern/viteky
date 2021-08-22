@@ -1,0 +1,47 @@
+{
+  "cSpell.words": [
+    "allowlist",
+    "attributify",
+    "deepassign",
+    "demi",
+    "dicom",
+    "iconify",
+    "intlify",
+    "kongying",
+    "langcode",
+    "pinia",
+    "stylelint",
+    "stylelintrc",
+    "vitesse",
+    "vuedx",
+    "vueuse",
+    "windi",
+    "windicss",
+    "yuanshen"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": "locales",
+  "i18n-ally.sortKeys": true,
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "volar.tsPlugin": true,
+  "volar.tsPluginStatus": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  }
+}

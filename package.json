@@ -1,0 +1,185 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "commit": "npx git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "dev": "vite --port 3333 --open",
+    "preview": "vite preview",
+    "preview-https": "serve dist",
+    "test": "jest --runInBand",
+    "jest:watchAll": "jest --watchAll",
+    "test:coverage": "pnpm build && jest --coverage",
+    "windicss:analysis": "windicss-analysis",
+    "lint": "pnpm lint:eslint && lint:style-fix",
+    "lint:style-check": "stylelint .",
+    "lint:style-fix": "stylelint . --fix",
+    "lint:check": "pnpm lint:prettier && pnpm lint:eslint",
+    "lint:eslint": "eslint . --ext .js,.ts,.vue --fix",
+    "lint:md": "pnpm lint:md-lint && pnpm lint:md-remark && pnpm lint:md-textlint",
+    "lint:md-lint": "markdownlint **/*.md  --ignore **/node_modules/**",
+    "lint:md-remark": "remark --quiet .",
+    "lint:md-textlint": "textlint ./src/**/*.md",
+    "lint:prettier": "prettier --check ./src",
+    "stylelint-check": "stylelint-config-prettier-check",
+    "packages:check-update": "ncu --deep --timeout 600000",
+    "packages:update": "ncu -u --deep --timeout 600000 && pnpm install && pnpm upgrade",
+    "envinfo": "npx envinfo --npmPackages  --system --browsers --binaries --duplicates",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "styles/*.{css,less,scss}": [
+      "stylelint --config .stylelintrc.json --fix"
+    ],
+    "styles/*.{css,scss,less,json,html,md,markdown}": [
+      "prettier --write"
+    ],
+    "*.{html,md,markdown}": [
+      "prettier --write"
+    ],
+    "package.json": "sort-package-json"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "remarkConfig": {
+    "plugins": [
+      "frontmatter",
+      [
+        "footnotes",
+        {
+          "inlineNotes": true
+        }
+      ],
+      "math",
+      "preset-lint-consistent",
+      "preset-lint-recommended",
+      "preset-lint-markdown-style-guide",
+      [
+        "lint-maximum-line-length",
+        false
+      ],
+      [
+        "lint-list-item-spacing",
+        false
+      ],
+      [
+        "lint-list-item-indent",
+        "space"
+      ],
+      [
+        "lint-emphasis-marker",
+        false
+      ]
+    ]
+  },
+  "dependencies": {
+    "@vueuse/core": "^6.0.0",
+    "@vueuse/head": "^0.6.0",
+    "dayjs": "^1.10.6",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.0-rc.6",
+    "sass": "^1.38.0",
+    "vue": "^3.2.4",
+    "vue-demi": "^0.11.3",
+    "vue-global-api": "^0.4.1",
+    "vue-i18n": "^9.1.7",
+    "vue-router": "^4.0.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@iconify/json": "^1.1.391",
+    "@intlify/vite-plugin-vue-i18n": "^2.4.0",
+    "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.8",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.1",
+    "@types/nprogress": "^0.2.0",
+    "@types/three": "^0.131.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "@vitejs/plugin-vue": "^1.4.0",
+    "@vue/compiler-sfc": "^3.2.4",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/server-renderer": "^3.2.4",
+    "babel-jest": "^27.0.6",
+    "concurrently": "^6.2.1",
+    "conventional-changelog-cli": "^2.1.1",
+    "cpx2": "^3.0.2",
+    "critters": "^0.0.10",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-prettier-vue": "^3.1.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "https-localhost": "^4.6.5",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "jest-serializer-vue": "^2.0.2",
+    "lint-md": "^0.2.0",
+    "lint-staged": "^11.1.2",
+    "markdownlint-cli": "^0.28.1",
+    "npm-check-updates": "^11.8.3",
+    "pnpm": "^6.13.0",
+    "remark-cli": "^10.0.0",
+    "remark-footnotes": "^4.0.1",
+    "remark-frontmatter": "^4.0.0",
+    "remark-lint": "^9.0.1",
+    "remark-math": "^5.0.0",
+    "remark-preset-lint-consistent": "^5.0.1",
+    "remark-preset-lint-markdown-style-guide": "^5.0.1",
+    "remark-preset-lint-recommended": "^6.0.1",
+    "stylelint": "^13.13.1",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.20.1",
+    "textlint": "^12.0.2",
+    "textlint-filter-rule-allowlist": "^4.0.0",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-rule-alex": "^3.0.0",
+    "textlint-rule-apostrophe": "^2.0.0",
+    "textlint-rule-common-misspellings": "^1.0.1",
+    "textlint-rule-date-weekday-mismatch": "^1.0.6",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-ja-no-abusage": "^3.0.0",
+    "textlint-rule-ja-no-mixed-period": "^2.1.1",
+    "textlint-rule-ja-space-between-half-and-full-width": "^2.2.0",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
+    "textlint-rule-stop-words": "^2.0.9",
+    "textlint-rule-terminology": "^2.1.5",
+    "textlint-rule-write-good": "^2.0.0",
+    "textlint-rule-zh-half-and-full-width-bracket": "^1.1.0",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5",
+    "vite": "^2.5.0",
+    "vite-plugin-components": "^0.13.2",
+    "vite-plugin-icons": "^0.6.5",
+    "vite-plugin-pages": "^0.17.4",
+    "vite-plugin-pwa": "^0.11.0",
+    "vite-plugin-vue-layouts": "^0.3.1",
+    "vite-plugin-windicss": "^1.2.7",
+    "vite-ssg": "^0.14.5",
+    "vue-tsc": "^0.2.3",
+    "windicss-analysis": "^0.3.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

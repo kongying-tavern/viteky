@@ -1,0 +1,43 @@
+:root {
+  // brand colors
+  --c-brand: #3eaf7c;
+  --c-brand-light: #4abf8a;
+
+  // background colors
+  --c-bg: #ffffff;
+  --c-bg-light: #f3f4f5;
+  --c-bg-lighter: #eeeeee;
+  --c-bg-navbar: var(--c-bg);
+  --c-bg-sidebar: var(--c-bg);
+  --c-bg-arrow: #cccccc;
+
+  // text colors
+  --c-text: #2c3e50;
+  --c-text-accent: var(--c-brand);
+  --c-text-light: #3a5169;
+  --c-text-lighter: #4e6e8e;
+  --c-text-lightest: #6a8bad;
+  --c-text-quote: #999999;
+
+  // border colors
+  --c-border: #eaecef;
+  --c-border-dark: #dfe2e5;
+
+  // transition vars
+  --t-color: 0.3s ease;
+  --t-transform: 0.3s ease;
+
+  // layout vars
+  --navbar-height: 3.6rem;
+  --navbar-padding-v: 0.7rem;
+  --navbar-padding-h: 1.5rem;
+  --sidebar-width: 20rem;
+  --sidebar-width-mobile: calc(var(--sidebar-width) * 0.82);
+  --content-width: 740px;
+  --homepage-width: 960px;
+}
+
+// plugin-nprogress
+#nprogress {
+  --nprogress-color: var(--c-brand);
+}

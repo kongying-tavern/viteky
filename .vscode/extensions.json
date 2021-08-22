@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "antfu.vite",
+    "johnsoncodehk.volar",
+    "lokalise.i18n-ally",
+    "antfu.iconify",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "voorjaar.windicss-intellisense",
+    "csstools.postcss",
+    "davidanson.vscode-markdownlint",
+    "stylelint.vscode-stylelint",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

@@ -1,0 +1,26 @@
+import type { Config } from '@jest/types'
+import { resolve } from 'path'
+
+const config: Config.InitialOptions = {
+  rootDir: resolve(__dirname),
+  collectCoverage: true,
+  testEnvironment: 'node',
+  preset: 'ts-jest/presets/js-with-babel',
+  globals: {
+    'ts-jest': {
+      tsconfig: '<rootDir>/tsconfig.json',
+    },
+  },
+  moduleNameMapper: {
+    '^dayjs/esm/(.*)$': 'dayjs/$1',
+  },
+  testMatch: [`<rootDir>/**/__tests__/**/*.spec.{js,ts}`],
+  testPathIgnorePatterns: [
+    '/node_modules/(?!(dayjs)/)',
+    '/__fixtures__/',
+    '@vuepress/client',
+  ],
+  coverageDirectory: 'coverage',
+}
+
+export default config
