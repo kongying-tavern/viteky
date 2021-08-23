@@ -14,6 +14,8 @@ export default defineConfig({
 
   resolve: {
     alias: {
+      // https://github.com/antfu/vitesse/issues/131
+      'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
@@ -26,6 +28,9 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['vue'],
+      exclude: ['**/components/*.vue'],
+      replaceSquareBrackets: true,
+      syncIndex: true,
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -71,17 +76,17 @@ export default defineConfig({
         description: 'The vue template repository of kongying-tavern',
         icons: [
           {
-            src: '/paimon_off@192.png',
+            src: './paimon_off@192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/paimon_off@512.png',
+            src: './paimon_off@512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/maskable_icon_x1.png',
+            src: './maskable_icon_x1.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable',
