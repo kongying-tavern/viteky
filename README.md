@@ -5,7 +5,7 @@
 The vue template repository of kongying-tavern.
 
 <p align="center">
-  <a href="https://kongying-tavern.github.io/viteky">Live Demo</a>
+  <a href="https://infallible-noyce-62bbb9.netlify.app/">Live Demo</a>
 </p>
 
 </div>
@@ -157,9 +157,7 @@ This project is heavily inspired by the following awesome projects.
 
 ## Deploy
 
-Release deployment powered by [Netlify](https://www.netlify.com). This deployment is built from the latest released version, so users will not see unreleased changes. The domain name is <https://viteky.yuanshen.site/>
-
-Developer deployment powered by GitHub Pages. This deployment is built from the latest commit, so developers could preview the latest changes. The domain name is <https://kongying-tavern.github.io/viteky>
+Developer deployment powered by [Netlify](https://www.netlify.com). This deployment is built from the latest commit, so developers could preview the latest changes. The domain name is <https://infallible-noyce-62bbb9.netlify.app/>
 
 ## License
 

@@ -2,7 +2,6 @@
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=production vite-ssg build",
-    "build:pages": "cross-env NODE_ENV=production BASE=viteky vite-ssg build",
     "commit": "npx git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "dev": "vite --port 3333 --open",
@@ -36,10 +35,7 @@
     "styles/*.{css,less,scss}": [
       "stylelint --config .stylelintrc.json --fix"
     ],
-    "styles/*.{css,scss,less,json,html,md,markdown}": [
-      "prettier --write"
-    ],
-    "*.{html,md,markdown}": [
+    "*.{css,scss,less,json,html,md,markdown,html,md,markdown}": [
       "prettier --write"
     ],
     "package.json": "sort-package-json"

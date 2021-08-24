@@ -21,7 +21,9 @@ const routes = setupLayouts(generatedRoutes)
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(
   App,
-  { routes, history: createWebHistory(import.meta.env.BASE_URL) },
+  // createWebHistory is not SSR compatible.
+  // Provide base instead https://github.com/antfu/vite-ssg/blob/afe8570c40f6161d12a912d9454926ec438223c8/src/types.ts#L94
+  { routes, history: createWebHistory() },
   (ctx) => {
     // install all modules under `modules/`
     Object.values(import.meta.globEager('./modules/*.ts')).map((i) =>
