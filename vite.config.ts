@@ -3,10 +3,11 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
-import ViteComponents from 'vite-plugin-components'
-import WindiCSS from 'vite-plugin-windicss'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import WindiCSS from 'vite-plugin-windicss'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 
@@ -45,28 +46,32 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
+      dts: true,
     }),
 
-    // https://github.com/antfu/vite-plugin-components
-    ViteComponents({
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue'],
 
-      // generate `components.d.ts` for ts support with Volar
-      globalComponentsDeclaration: true,
+      dts: true,
 
-      // auto import icons
-      customComponentResolvers: [
-        // https://github.com/antfu/vite-plugin-icons
-        ViteIconsResolver({
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+
+      // custom resolvers
+      resolvers: [
+        // auto import icons
+        // https://github.com/antfu/unplugin-icons
+        IconsResolver({
           componentPrefix: '',
           // enabledCollections: ['carbon']
         }),
       ],
     }),
 
-    // https://github.com/antfu/vite-plugin-icons
-    ViteIcons(),
+    // https://github.com/antfu/unplugin-icons
+    Icons(),
 
     // https://github.com/antfu/vite-plugin-windicss
     WindiCSS(),
@@ -128,6 +133,5 @@ export default defineConfig({
 
   optimizeDeps: {
     include: ['vue', 'vue-router', '@vueuse/core'],
-    exclude: ['vue-demi'],
   },
 })
