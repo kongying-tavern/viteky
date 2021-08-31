@@ -1,6 +1,9 @@
-dist
-node_modules
+**/dist/**
+**/node_modules/**
 public
 vite.config.ts
 shims.d.ts
 coverage
+.cache/**
+.temp/**
+public/**

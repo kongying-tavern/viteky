@@ -9,13 +9,6 @@ extends:
   - plugin:vue/vue3-recommended
   - plugin:prettier/recommended
 
-ignorePatterns:
-  - '**/dist/**'
-  - '**/node_modules/**'
-  - '.cache/**'
-  - '.temp/**'
-  - 'public/**'
-
 overrides:
   - files:
       - '*.vue'
