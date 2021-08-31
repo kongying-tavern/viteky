@@ -1,5 +1,10 @@
-# intellij stuff
 .idea/
+components.d.ts
+auto-imports.d.ts
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
+
 # logs
 *.log
 

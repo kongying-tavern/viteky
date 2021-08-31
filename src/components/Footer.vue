@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { useI18n } from 'vue-i18n'
 import { isDark, toggleDark } from '~/logic'
 
 const { t, availableLocales, locale } = useI18n()
@@ -20,7 +19,7 @@ const toggleLocales = () => {
     <button
       class="icon-btn mx-2 !outline-none"
       :title="t('button.toggle_dark')"
-      @click="toggleDark"
+      @click="toggleDark()"
     >
       <carbon-moon v-if="isDark" />
       <carbon-sun v-else />

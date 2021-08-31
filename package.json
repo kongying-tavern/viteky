@@ -84,13 +84,14 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.0-rc.6",
     "sass": "^1.38.0",
+    "unplugin-auto-import": "^0.2.6",
     "vue": "^3.2.4",
     "vue-demi": "^0.11.3",
-    "vue-global-api": "^0.4.1",
     "vue-i18n": "^9.1.7",
     "vue-router": "^4.0.11"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.7.0",
     "@babel/core": "^7.15.0",
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
     "@babel/preset-env": "^7.15.0",

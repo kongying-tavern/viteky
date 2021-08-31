@@ -5,10 +5,10 @@ env:
   es6: true
 
 extends:
+  - "@antfu"
   - plugin:vue/vue3-recommended
   - eslint:recommended
   - plugin:prettier/recommended
-  - vue-global-api
 
 ignorePatterns:
   - '**/dist/**'
