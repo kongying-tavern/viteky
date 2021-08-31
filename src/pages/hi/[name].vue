@@ -24,11 +24,11 @@ watchEffect(() => {
       <em>{{ t('intro.dynamic-route') }}</em>
     </p>
 
-    <template v-if="user.otherNames.length!">
+    <template v-if="user.otherNames.length">
       <div class="text-sm mt-4">
         <span class="opacity-75"> {{ t('intro.aka') }}: </span>
         <ul>
-          <li v-for="_name in user.otherNames" :key="_name!">
+          <li v-for="_name in user.otherNames" :key="_name">
             <router-link :to="`/hi/${name}`" replace>
               {{ name }}
             </router-link>
