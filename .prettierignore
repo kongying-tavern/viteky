@@ -1,0 +1,9 @@
+# Build Output
+dist/
+lib/
+
+# Node Modules
+node_modules/
+
+# Test Coverage
+coverage/

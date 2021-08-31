@@ -45,6 +45,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "prettier": "@kongying-tavern/prettier-config",
   "remarkConfig": {
     "plugins": [
       "frontmatter",
@@ -97,6 +98,7 @@
     "@commitlint/config-conventional": "^13.1.0",
     "@iconify/json": "^1.1.391",
     "@intlify/vite-plugin-vue-i18n": "^2.4.0",
+    "@kongying-tavern/prettier-config": "^1.0.1-1",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.8",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.1",

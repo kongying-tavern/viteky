@@ -8,6 +8,7 @@ specifiers:
   '@commitlint/config-conventional': ^13.1.0
   '@iconify/json': ^1.1.391
   '@intlify/vite-plugin-vue-i18n': ^2.4.0
+  '@kongying-tavern/prettier-config': ^1.0.1-1
   '@textlint-rule/textlint-rule-no-unmatched-pair': ^1.0.8
   '@types/jest': ^27.0.1
   '@types/node': ^16.7.1
@@ -119,6 +120,7 @@ devDependencies:
   '@commitlint/config-conventional': 13.1.0
   '@iconify/json': 1.1.391
   '@intlify/vite-plugin-vue-i18n': 2.4.0_4cef02acf2f8b9c8009dbbdef0b0dc6c
+  '@kongying-tavern/prettier-config': 1.0.1-1
   '@textlint-rule/textlint-rule-no-unmatched-pair': 1.0.8
   '@types/jest': 27.0.1
   '@types/node': 16.7.1
@@ -1879,6 +1881,10 @@ packages:
       '@types/node': 16.7.1
       '@types/yargs': 16.0.4
       chalk: 4.1.2
+    dev: true
+
+  /@kongying-tavern/prettier-config/1.0.1-1:
+    resolution: {integrity: sha512-Dv170DDaE51MuWrOrrF9rkv964oHMk/xlqWo0hcCTby6SV5zK4IxxvydvKuPtpiQQGsBxFF+Ba7SyiSJ9gTITA==}
     dev: true
 
   /@mrmlnc/readdir-enhanced/2.2.1:
