@@ -7,7 +7,6 @@ env:
 extends:
   - "@antfu"
   - plugin:vue/vue3-recommended
-  - eslint:recommended
   - plugin:prettier/recommended
 
 ignorePatterns:
@@ -128,6 +127,9 @@ overrides:
 
       '@typescript-eslint/no-floating-promises':
         - warn
+
+      'no-void':
+        - off
 
       'no-unused-vars':
         - error

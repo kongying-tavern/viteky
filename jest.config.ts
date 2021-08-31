@@ -1,5 +1,5 @@
-import type { Config } from '@jest/types'
 import { resolve } from 'path'
+import type { Config } from '@jest/types'
 
 const config: Config.InitialOptions = {
   rootDir: resolve(__dirname),
