@@ -4,6 +4,16 @@
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/favicon.ico" sizes="120x120" />
+    <script>
+      ;(function (win) {
+        const prefersDark =
+          win.matchMedia &&
+          win.matchMedia('(prefers-color-scheme: dark)').matches
+        const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+        if (setting === 'dark' || (prefersDark && setting !== 'light'))
+          document.documentElement.classList.toggle('dark', true)
+      })(window)
+    </script>
     <!-- Google Tag Manager -->
     <script>
       ;(function (w, d, s, l, i) {
@@ -35,16 +45,6 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="app"></div>
-    <script>
-      ;(function (win) {
-        const prefersDark =
-          win.matchMedia &&
-          win.matchMedia('(prefers-color-scheme: dark)').matches
-        const setting = win.localStorage.getItem('color-schema') || 'auto'
-        if (setting === 'dark' || (prefersDark && setting !== 'light'))
-          document.documentElement.classList.toggle('dark', true)
-      })(window)
-    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
