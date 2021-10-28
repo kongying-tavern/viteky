@@ -22,7 +22,7 @@ useHead({
     { name: 'applicable-device', content: 'pc,mobile' },
     { name: 'format-detection', content: 'telephone=no' },
     { name: 'google', content: 'notranslate' },
-    { name: 'origin', content: 'origin' },
+    { name: 'referrer', content: 'same-origin' },
     // Open Graph Protocol
     { property: 'og:title', content: 'Viteky' },
     { property: 'og:type', content: 'article' },

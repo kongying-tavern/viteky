@@ -16,8 +16,6 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      // https://github.com/antfu/vitesse/issues/131
-      'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
@@ -46,7 +44,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
-      dts: true,
+      dts: 'src/auto-imports.d.ts',
     }),
 
     // https://github.com/antfu/unplugin-vue-components
@@ -54,10 +52,8 @@ export default defineConfig({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue'],
 
-      dts: true,
-
       // allow auto import and register components used in markdown
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      include: [/\.vue$/, /\.vue\?vue/],
 
       // custom resolvers
       resolvers: [
@@ -68,6 +64,8 @@ export default defineConfig({
           // enabledCollections: ['carbon']
         }),
       ],
+
+      dts: 'src/components.d.ts',
     }),
 
     // https://github.com/antfu/unplugin-icons
