@@ -12,7 +12,6 @@ specifiers:
   '@kongying-tavern/prettier-config': ^1.0.1-1
   '@textlint-rule/textlint-rule-no-unmatched-pair': ^1.0.8
   '@types/jest': ^27.0.2
-  '@types/node': ^16.11.6
   '@types/nprogress': ^0.2.0
   '@types/three': ^0.133.1
   '@typescript-eslint/eslint-plugin': ^5.2.0
@@ -127,7 +126,6 @@ devDependencies:
   '@kongying-tavern/prettier-config': 1.0.1-1
   '@textlint-rule/textlint-rule-no-unmatched-pair': 1.0.8
   '@types/jest': 27.0.2
-  '@types/node': 16.11.6
   '@types/nprogress': 0.2.0
   '@types/three': 0.133.1
   '@typescript-eslint/eslint-plugin': 5.2.0_9a56ca1c5fc1d82b3da3317a5c6f9ab1
@@ -191,7 +189,7 @@ devDependencies:
   textlint-rule-write-good: 2.0.0
   textlint-rule-zh-half-and-full-width-bracket: 1.1.0_textlint@12.0.2
   ts-jest: 27.0.7_23910afae9942845e737b2535ff8108e
-  ts-node: 10.4.0_0cb88d80cb04d25b21fa3ec194608c65
+  ts-node: 10.4.0_typescript@4.4.4
   typescript: 4.4.4
   vite: 2.6.13_sass@1.43.4
   vite-plugin-pages: 0.18.2_8d243728697ba143b290806bcef1890d
@@ -7958,7 +7956,7 @@ packages:
       jest-validate: 27.3.1
       micromatch: 4.0.4
       pretty-format: 27.3.1
-      ts-node: 10.4.0_0cb88d80cb04d25b21fa3ec194608c65
+      ts-node: 10.4.0_typescript@4.4.4
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -14210,7 +14208,7 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-node/10.4.0_0cb88d80cb04d25b21fa3ec194608c65:
+  /ts-node/10.4.0_typescript@4.4.4:
     resolution: {integrity: sha512-g0FlPvvCXSIO1JDF6S232P5jPYqBkRL9qly81ZgAOSU7rwI0stphCgd2kLiCrU9DjQCrJMWEqcNSjQL02s6d8A==}
     hasBin: true
     peerDependencies:
@@ -14229,7 +14227,6 @@ packages:
       '@tsconfig/node12': 1.0.9
       '@tsconfig/node14': 1.0.1
       '@tsconfig/node16': 1.0.2
-      '@types/node': 16.11.6
       acorn: 8.5.0
       acorn-walk: 8.2.0
       arg: 4.1.3
